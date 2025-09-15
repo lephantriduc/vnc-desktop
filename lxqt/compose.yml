@@ -1,0 +1,14 @@
+name: ktpm-3
+
+services:
+  ubuntu-vnc:
+    image: ubuntu-lxqt-vnc
+    container_name: ubuntu-lxqt-vnc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      USER: dockeruser
+    ports:
+      - 27:22
+      - 5901:5901
