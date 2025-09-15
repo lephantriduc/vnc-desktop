@@ -1,0 +1,14 @@
+name: ktpm-2
+
+services:
+  ubuntu-vnc:
+    image: ubuntu-udesktop-vnc
+    container_name: ubuntu-udesktop-vnc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      USER: dockeruser
+    ports:
+      - 26:22
+      - 5901:5901
